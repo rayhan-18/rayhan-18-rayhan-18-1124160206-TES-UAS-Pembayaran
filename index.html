@@ -82,7 +82,33 @@
       </form>
     </section>
 
-    
+    <!-- Riwayat Transaksi -->
+    <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+      <div class="flex justify-between mb-4">
+        <h2 class="text-xl font-semibold">Riwayat Transaksi</h2>
+        <button id="clearHistoryBtn" class="py-2 px-4 bg-red-500 hover:bg-red-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 hidden">Hapus Semua</button>
+      </div>
+      <div class="grid grid-cols-3 gap-4 text-center mb-6">
+        <div>
+          <div id="totalTransactions" class="text-2xl font-bold">0</div>
+          <div class="text-sm">Transaksi</div>
+        </div>
+        <div>
+          <div id="totalRevenue" class="text-2xl font-bold">Rp 0</div>
+          <div class="text-sm">Pendapatan</div>
+        </div>
+        <div>
+          <div id="avgTransaction" class="text-2xl font-bold">Rp 0</div>
+          <div class="text-sm">Rata-rata</div>
+        </div>
+      </div>
+      <div id="transactionList" class="space-y-3 max-h-96 overflow-y-auto">
+        <div id="emptyState" class="text-center py-8 text-gray-500">
+          <p class="font-medium">Belum ada transaksi</p>
+          <p class="text-sm">Lakukan pembayaran pertama Anda!</p>
+        </div>
+      </div>
+    </section>
 
   </main>
     
