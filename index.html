@@ -21,6 +21,70 @@
       <span class="label hidden dark:inline">Light Mode</span>
     </button>
   </header>
+
+  <main class="container mx-auto max-w-5xl px-4 grid lg:grid-cols-2 gap-8">
+
+    <!-- Form Pembayaran -->
+    <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+      <h2 class="text-xl font-semibold mb-4">Form Pembayaran</h2>
+      <form id="paymentForm" class="space-y-4">
+        <div>
+          <label for="customerName">Nama Pelanggan</label>
+          <input type="text" id="customerName" required class="w-full px-4 py-2 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label for="customerEmail">Email</label>
+          <input type="email" id="customerEmail" required class="w-full px-4 py-2 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label for="productSelect">Produk/Layanan</label>
+          <select id="productSelect" required class="w-full px-4 py-2 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Pilih produk...</option>
+            <option value="basic" data-price="100000">Paket Check Kaki - Rp 100.000</option>
+            <option value="premium" data-price="200000">Paket Servis Rem - Rp 200.000</option>
+            <option value="professional" data-price="300000">Paket Tune Up - Rp 300.000</option>
+            <option value="enterprise" data-price="500000">Paket Ganti Oli Mesin - Rp 500.000</option>
+          </select>
+        </div>
+        <div>
+          <label for="quantity">Jumlah</label>
+          <input type="number" id="quantity" value="1" min="1" required class="w-full px-4 py-2 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+        <div>
+          <label>Metode Pembayaran</label>
+          <div class="space-y-2">
+            <label><input type="radio" name="paymentMethod" value="transfer" required /> Transfer Bank</label>
+            <label><input type="radio" name="paymentMethod" value="ewallet" /> E-Wallet</label>
+            <label><input type="radio" name="paymentMethod" value="credit" /> Kartu Kredit</label>
+            <label><input type="radio" name="paymentMethod" value="cash" /> Tunai</label>
+          </div>
+        </div>
+        <div>
+          <label for="promoCode">Kode Promo (Opsional)</label>
+          <div class="flex gap-2">
+            <input type="text" id="promoCode" class="flex-1 px-4 py-2 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <button type="button" id="applyPromoBtn" class="py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">Terapkan</button>
+          </div>
+          <div id="promoMessage" class="mt-2 text-sm hidden"></div>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+          <div class="flex justify-between text-sm">
+            <span>Subtotal:</span><span id="subtotal">Rp 0</span>
+          </div>
+          <div id="discountRow" class="flex justify-between text-sm text-green-600 hidden">
+            <span>Diskon:</span><span id="discount">Rp 0</span>
+          </div>
+          <div class="flex justify-between font-semibold border-t pt-2">
+            <span>Total:</span><span id="totalAmount">Rp 0</span>
+          </div>
+        </div>
+        <button type="submit" class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">Proses Pembayaran</button>
+      </form>
+    </section>
+
+    
+
+  </main>
     
 </body>
 </html>
