@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Pembayaran</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Pembayaran</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 min-h-screen py-8 text-gray-900 dark:text-gray-100">
+
+  <header class="flex items-center justify-between px-10 mb-6">
+    <img src="assets/me.jpg" alt="Foto Kiri" class="w-12 h-12 rounded-full object-cover" />
+    <button id="darkModeToggle" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center space-x-2">
+      <span class="icon-sun hidden dark:inline">☀️</span>
+      <span class="icon-moon dark:hidden">🌙</span>
+      <span class="label dark:hidden">Dark Mode</span>
+      <span class="label hidden dark:inline">Light Mode</span>
+    </button>
+  </header>
     
 </body>
 </html>
